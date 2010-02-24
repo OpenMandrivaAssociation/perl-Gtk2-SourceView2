@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:    Perl module for the gtksourceview library
 License:    GPL+ or Artistic
@@ -23,7 +23,7 @@ BuildRequires: perl-devel
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 # for data files:
-Requires: gtksourceview1
+Requires: gtksourceview
 Requires: gtk+2
 
 %description
