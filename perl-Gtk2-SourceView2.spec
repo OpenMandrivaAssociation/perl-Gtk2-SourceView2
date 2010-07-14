@@ -1,5 +1,5 @@
 %define upstream_name    Gtk2-SourceView2
-%define upstream_version 0.07
+%define upstream_version 0.10
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
