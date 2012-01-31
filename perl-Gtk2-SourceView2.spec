@@ -1,15 +1,15 @@
-%define upstream_name    Gtk2-SourceView2
+%define	module	Gtk2-SourceView2
 %define upstream_version 0.10
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
+Name:		perl-%{module}
+Version:	%perl_convert_version %{upstream_version}
 Release:	8
 
-Summary:    Perl module for the gtksourceview library
-License:    GPLv2+ or Artistic
-Group:      Development/GNOME and GTK+
-Url:        http://gtk2-perl.sf.net/
-Source0:    %{upstream_name}-%{upstream_version}.tar.gz
+Summary:	Perl module for the gtksourceview library
+License:	GPLv2+ or Artistic
+Group:		Development/GNOME and GTK+
+Url:		http://gtk2-perl.sf.net/
+Source0:	%{module}-%{upstream_version}.tar.gz
 
 BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(libgnomeprintui-2.2)
@@ -20,11 +20,9 @@ BuildRequires:	perl-Glib > 1.00
 BuildRequires:	perl-Gtk2 > 1.00
 BuildRequires:	perl-devel 
 
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
-
 # for data files:
-Requires: gtksourceview
-Requires: gtk+2
+Requires:	gtksourceview
+Requires:	gtk+2
 
 %description
 This module provides perl access to the libgtksourceview library, a library
@@ -33,23 +31,17 @@ features.
 GtkSourceView specializes these features for a code editor.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{module}-%{upstream_version}
 perl Makefile.PL INSTALLDIRS=vendor
 
 %build
-RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
 %make OPTIMIZE="$RPM_OPT_FLAGS"
 #%make test || :
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-, root, root)
 %doc examples
 %{_mandir}/*/*
 %{perl_vendorarch}/Gtk2/*
