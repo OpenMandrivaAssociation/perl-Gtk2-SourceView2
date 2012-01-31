@@ -6,7 +6,7 @@ Version:    %perl_convert_version %{upstream_version}
 Release:	8
 
 Summary:    Perl module for the gtksourceview library
-License:    GPL+ or Artistic
+License:    GPLv2+ or Artistic
 Group:      Development/GNOME and GTK+
 Url:        http://gtk2-perl.sf.net/
 Source0:    %{upstream_name}-%{upstream_version}.tar.gz
