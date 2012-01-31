@@ -11,14 +11,14 @@ Group:      Development/GNOME and GTK+
 Url:        http://gtk2-perl.sf.net/
 Source0:    %{upstream_name}-%{upstream_version}.tar.gz
 
-BuildRequires: gtk+2-devel 
-BuildRequires: libgnomeprintui2-2-devel
-BuildRequires: libgtksourceview-2.0-devel >= 0.7 
-BuildRequires: perl-ExtUtils-Depends 
-BuildRequires: perl-ExtUtils-PkgConfig
-BuildRequires: perl-Glib > 1.00
-BuildRequires: perl-Gtk2 > 1.00
-BuildRequires: perl-devel 
+BuildRequires:	pkgconfig(gtk+-2.0)
+BuildRequires:	pkgconfig(libgnomeprintui-2.2)
+BuildRequires:	pkgconfig(gtksourceview-2.0)
+BuildRequires:	perl-ExtUtils-Depends 
+BuildRequires:	perl-ExtUtils-PkgConfig
+BuildRequires:	perl-Glib > 1.00
+BuildRequires:	perl-Gtk2 > 1.00
+BuildRequires:	perl-devel 
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
