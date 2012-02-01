@@ -35,7 +35,7 @@ GtkSourceView specializes these features for a code editor.
 perl Makefile.PL INSTALLDIRS=vendor
 
 %build
-%make OPTIMIZE="$RPM_OPT_FLAGS"
+%make
 #%make test || :
 
 %install
