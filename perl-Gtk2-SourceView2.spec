@@ -3,7 +3,7 @@
 
 Name:		perl-%{module}
 Version:	%perl_convert_version %{upstream_version}
-Release:	9
+Release:	10
 
 Summary:	Perl module for the gtksourceview library
 License:	GPLv2+ or Artistic
