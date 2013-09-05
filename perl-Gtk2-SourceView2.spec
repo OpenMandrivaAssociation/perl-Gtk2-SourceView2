@@ -4,7 +4,7 @@
 Summary:	Perl module for the gtksourceview library
 Name:		perl-%{module}
 Version:	%perl_convert_version %{modver}
-Release:	10
+Release:	11
 License:	GPLv2+ or Artistic
 Group:		Development/GNOME and GTK+
 Url:		http://gtk2-perl.sf.net/
@@ -16,7 +16,8 @@ BuildRequires:	perl-Gtk2 > 1.00
 BuildRequires:	perl-devel
 BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(gtksourceview-2.0)
-BuildRequires:	pkgconfig(libgnomeprintui-2.2)
+# no needed
+#BuildRequires:	pkgconfig(libgnomeprintui-2.2)
 # for data files:
 Requires:	gtksourceview
 Requires:	gtk+2
@@ -32,7 +33,7 @@ GtkSourceView specializes these features for a code editor.
 perl Makefile.PL INSTALLDIRS=vendor
 
 %build
-%make OPTIMIZE="$RPM_OPT_FLAGS"
+%make OPTIMIZE="%{optflags}"
 
 %check
 #%make test || :
