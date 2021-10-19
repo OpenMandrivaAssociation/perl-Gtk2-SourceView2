@@ -30,7 +30,7 @@ features.
 GtkSourceView specializes these features for a code editor.
 
 %prep
-%setup -qn %{module}-%{modver}
+%autosetup -p1 -n %{module}-%{modver}
 perl Makefile.PL INSTALLDIRS=vendor
 
 %build
@@ -40,11 +40,11 @@ perl Makefile.PL INSTALLDIRS=vendor
 #%make test || :
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc examples
 %{perl_vendorarch}/Gtk2/*
 %{perl_vendorarch}/auto/*
-%{_mandir}/man3/*
+%doc %{_mandir}/man3/*
 
