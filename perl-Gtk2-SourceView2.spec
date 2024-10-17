@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{modver}
 Release:	23
 License:	GPLv2+ or Artistic
 Group:		Development/GNOME and GTK+
-Url:		http://gtk2-perl.sf.net/
+Url:		https://gtk2-perl.sf.net/
 Source0:	%{module}-%{modver}.tar.gz
 Source100:	%{name}.rpmlintrc
 BuildRequires:	perl-ExtUtils-Depends 
