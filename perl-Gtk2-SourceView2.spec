@@ -1,14 +1,14 @@
 %define	module	Gtk2-SourceView2
-%define modver	0.10
+%define modver	0.12
 
 Summary:	Perl module for the gtksourceview library
 Name:		perl-%{module}
-Version:	%perl_convert_version %{modver}
-Release:	23
+Version:	%{modver}
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/GNOME and GTK+
 Url:		https://gtk2-perl.sf.net/
-Source0:	%{module}-%{modver}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/X/XA/XAOC/Gtk2-SourceView2-%{modver}.tar.gz
 Source100:	%{name}.rpmlintrc
 BuildRequires:	make
 BuildRequires:	perl-ExtUtils-Depends 
